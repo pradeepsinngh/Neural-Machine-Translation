@@ -1,6 +1,5 @@
 import os
 
-
 def load_data(path):
     """
     Load dataset
