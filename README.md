@@ -59,3 +59,6 @@ I have used a dataset (contains small vocabulary) that is creadted by Udaticy. Y
 | Model 4  | 57.70  |
 | Model 5  | 85.89  |
 
+## Future Enhancements 
+- Train much more deep network
+- Train on bigger dataset, such as [WMT](http://www.statmt.org/)
