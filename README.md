@@ -27,7 +27,7 @@ When batching the sequence of word ids together, each sequence needs to be the s
 
 All the English sequences and the French sequences have the same length by adding padding to the end of each sequence using [Keras's pad_sequences function](https://keras.io/preprocessing/sequence/#pad_sequences).
 
-### Models
+## Models
 
 Experimenting with various neural network architectures. I'll be training these five simple architectures:
 
@@ -39,7 +39,7 @@ Experimenting with various neural network architectures. I'll be training these 
 
 After experimenting with the four simple architectures, you will construct a deeper architecture that is designed to outperform all four models.
 
-### Prediction
+## Prediction
 
 In this step, we will train our final model and will run it over English text to get it's French Translation.
 
