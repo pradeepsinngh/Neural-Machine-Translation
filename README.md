@@ -9,16 +9,12 @@ This pipeline can be divided into 3 parts -
 3. Part 3: Prediction
 
 ### Preprocessing
+Neural Network don't accpet textual data as input, they need input in numerical format only. So, we will have to text into sequences of integers. We will use following preprocess methods in Keras:
 
-Preprocess
+- Tokenization: Tokenize the words into ids
+- Padding: Add padding to make all the sequences the same length.
 
-For this project, you won't use text data as input to your model. Instead, you'll convert the text into sequences of integers using the following preprocess methods:
-
-    Tokenize the words into ids
-    Add padding to make all the sequences the same length.
-
-Time to start preprocessing the data...
-Tokenize (IMPLEMENTATION)
+#### Tokenize
 
 For a neural network to predict on text data, it first has to be turned into data it can understand. Text data like "dog" is a sequence of ASCII character encodings. Since a neural network is a series of multiplication and addition operations, the input data needs to be number(s).
 
@@ -28,8 +24,7 @@ Turn each sentence into a sequence of words ids using Keras's Tokenizer function
 
 Running the cell will run tokenize on sample data and show output for debugging.
 
-
-Padding (IMPLEMENTATION)
+#### Padding
 
 When batching the sequence of word ids together, each sequence needs to be the same length. Since sentences are dynamic in length, we can add padding to the end of the sequences to make them the same length.
 
