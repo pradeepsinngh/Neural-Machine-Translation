@@ -21,13 +21,13 @@ So, we will have to convert text into sequences of integers. We will use followi
 
 We can turn each character into a number or each word into a number. These are called character and word ids, respectively. Character ids are used for character level models that generate text predictions for each character. A word level model uses word ids that generate text predictions for each word. Word level models tend to learn better, since they are lower in complexity, so we'll use those.
 
-We can turn each sentence into a sequence of words ids using Keras's Tokenizer function.
+We can turn each sentence into a sequence of words ids using [Keras's Tokenizer function](https://keras.io/preprocessing/text/#tokenizer).
 
 #### Padding
 
 When batching the sequence of word ids together, each sequence needs to be the same length. Since sentences are dynamic in length, we can add padding to the end of the sequences to make them the same length.
 
-All the English sequences and the French sequences have the same length by adding padding to the end of each sequence using Keras's pad_sequences function.
+All the English sequences and the French sequences have the same length by adding padding to the end of each sequence using [Keras's pad_sequences function](https://keras.io/preprocessing/sequence/#pad_sequences).
 
 ### Models
 
