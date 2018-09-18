@@ -37,8 +37,6 @@ Experimenting with various neural network architectures. I'll be training these 
     Model 4 is a Encoder-Decoder RNN
     Model 5 is a Bidirectional RNN with Embedding (Final Model)
 
-After experimenting with the four simple architectures, you will construct a deeper architecture that is designed to outperform all four models.
-
 ## Prediction
 
 In this step, we will train our final model and will run it over English text to get it's French Translation.
