@@ -7,7 +7,7 @@ In this project, I have worked on an End-to-End Machine translation pipeline tha
 3. Part 3: Prediction
 
 ## Dataset:
-The Europarl is a standard dataset used for statistical machine translation, and more recently, neural machine translation. It is comprised of the proceedings of the European Parliament, hence the name of the dataset as the contraction Europarl.  I have worked on a dataset which is consist of French and English translations. It  consists  of  2,218,201  English  sentences  and  2,190,579  French sentences.  I have used a subset of this dataset,  as it will take a long time to train neural network on.  But, I do plan to work on full dataset in near future.
+The [Europarl](http://www.statmt.org/europarl/) is a standard dataset used for statistical machine translation, and more recently, neural machine translation. It is comprised of the proceedings of the European Parliament, hence the name of the dataset as the contraction Europarl. I have worked on a dataset which is consist of French and English translations. It  consists  of  2,218,201  English  sentences  and  2,190,579  French sentences.  I have used a subset of this dataset,  as it will take a long time to train neural network on. But, I do plan to work on full dataset in near future.
 
 ## Preprocessing
 
