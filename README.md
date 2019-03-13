@@ -44,10 +44,6 @@ Experimenting with various neural network architectures. I'll be training these 
 
 In this step, we will train our final model and will run it over English text to get it's French Translation.
 
-## Dataset
-
-I have used a dataset (contains small vocabulary) that is creadted by Udaticy. You can find that in this Github repo. Here is the link to most common dataset used for machine translation projects -- [WMT](http://www.statmt.org/). Since it's quite big this will take a long time to train a neural network. In future I'll try to use it to train my models.
-
 ## Results
 
 | Model    | Accuracy|
