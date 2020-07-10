@@ -1,4 +1,5 @@
 # Machine Translation
+[![HitCount](http://hits.dwyl.com/pradeepsinngh/https://githubcom/pradeepsinngh/Neural-Machine-Translation.svg)](http://hits.dwyl.com/pradeepsinngh/https://githubcom/pradeepsinngh/Neural-Machine-Translation)
 
 ## Introduction
 In this project, I have worked on an End-to-End Machine translation pipeline that accpets English text as input and return the French translation. This pipeline can be divided into 3 parts -
