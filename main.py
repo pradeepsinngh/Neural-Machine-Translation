@@ -1,3 +1,8 @@
+from data.load import *
+from data.preprocess import *
+from models.model import *
+from utils import *
+
 import tensorflow as tf
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
@@ -9,8 +14,6 @@ import numpy as np
 import os
 import io
 import time
-from utils import *
-from model import *
 
 
 def get_data(path, num_examples):
