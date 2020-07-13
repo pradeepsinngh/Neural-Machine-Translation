@@ -1,4 +1,4 @@
-from data.preprocess import *
+from preprocess import *
 import io
 
 

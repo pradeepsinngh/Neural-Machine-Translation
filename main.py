@@ -1,5 +1,5 @@
-from data.load import *
-from data.preprocess import *
+from load import *
+from preprocess import *
 from models.model import *
 from utils import *
 
@@ -25,7 +25,7 @@ def get_data(path, num_examples):
 
     # Creating training and validation sets using an 80-20 split
     input_train, input_val, target_train, target_val = train_test_split(input_tensor, target_tensor, test_size=0.2)
-    print('Lenght of Input and Target  ')
+    print('Lenght of Input and Target: ')
     print(len(input_train), len(input_val), len(target_train), len(target_val))
 
     return input_train, input_val, target_train, target_val, inp_lang, targ_lang, max_length_inp, max_length_targ
@@ -46,7 +46,6 @@ def train_step(inp, targ, enc_hidden):
         dec_hidden = enc_hidden
         dec_input = tf.expand_dims([targ_lang.word_index['<start>']] * BATCH_SIZE, 1)
 
-        # Teacher forcing - feeding the target as the next input
         for t in range(1, targ.shape[1]):
             # passing enc_output to the decoder
             predictions, dec_hidden, _ = decoder(dec_input, dec_hidden, enc_output)
@@ -95,7 +94,6 @@ def evaluate(sentence):
 
     return result, sentence, attention_plot
 
-
 def translate(sentence):
     result, sentence, attention_plot = evaluate(sentence)
 
@@ -113,7 +111,7 @@ if __name__ == "__main__":
     checkpoint_dir = './checkpoint'
     checkpoint_prefix = os.path.join(checkpoint_dir, "checkpoint")
 
-    num_examples = 2000
+    num_examples = 1000 # 60,000
     input_tensor_train, input_tensor_val, target_tensor_train, target_tensor_val, inp_lang, targ_lang, max_length_inp, max_length_targ = get_data(path_to_file, num_examples)
 
     BUFFER_SIZE = len(input_tensor_train)
@@ -132,10 +130,13 @@ if __name__ == "__main__":
     dataset = dataset.batch(BATCH_SIZE, drop_remainder=True)
 
     encoder = Encoder(vocab_inp_size, embedding_dim, units, BATCH_SIZE)
-    decoder = Decoder(vocab_tar_size, embedding_dim, units, BATCH_SIZE)
+    decoder = Decoder(vocab_tar_size, embedding_dim, units, BATCH_SIZE, method = 'concat')
+
     optimizer = tf.keras.optimizers.Adam(1.0e-3)
     loss_object = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True, reduction='none')
     checkpoint = tf.train.Checkpoint(optimizer=optimizer, encoder=encoder, decoder=decoder)
+
+    print('Starting training .....')
 
     for epoch in range(EPOCHS):
         start = time.time()
@@ -155,6 +156,7 @@ if __name__ == "__main__":
 
         print('Epoch {} Loss {:.4f}'.format(epoch + 1, total_loss / steps_per_epoch))
         print('Time taken for 1 epoch {} sec\n'.format(time.time() - start))
+
 
     # restoring the latest checkpoint in checkpoint_dir
     checkpoint.restore(tf.train.latest_checkpoint(checkpoint_dir))
