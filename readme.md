@@ -7,23 +7,31 @@ This reporsiroty host my code base for Neural Machine Translation projects. I ha
  
  
  ### Structure: 
-├─ NMT_xyz.             # replace xyz with attention, transformer, seq2seq
-│  ├─ checkpoints.      # stores encoder and decoder weights in .h5
+├─ NMT_xyz             
+│  ├─ checkpoints      
 │  │  ├─ decoder
 │  │  │  └─ *.h5
 │  │  └─ encoder
 │  │  │  └─ *.h5
-│  ├─ data.             # data for training models
+│  ├─ data.             
 │  │  ├─ fra-eng
 │  │  │  ├─ _about.txt
 │  │  │  └─ fra.txt
-│  │  └─ fra-eng.zip.   # data in zip file
-│  ├─ data.py           # script for loading and creating dataset
-│  ├─ model.py.         # file for encoder and decoder models
-│  ├─ preprocessing.py. # for pre-processing data
-│  ├─ run.py            # driver file for the project - set MODE == 'TRAIN' or 'TEST'
-│  └─ utils.py          # utility function 
+│  │  └─ fra-eng.zip   
+│  ├─ data.py           
+│  ├─ model.py         
+│  ├─ preprocessing.py
+│  ├─ run.py            
+│  └─ utils.py          
 └─ readme.md            
 
  
- 
+ # replace xyz with attention, transformer, seq2seq
+# stores encoder and decoder weights in .h5
+# data for training models
+# data in zip file
+# script for loading and creating dataset
+# file for encoder and decoder models
+# for pre-processing data
+# driver file for the project - set MODE == 'TRAIN' or 'TEST'
+# utility function 
