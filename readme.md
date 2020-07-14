@@ -7,6 +7,7 @@ This reporsiroty host my code base for Neural Machine Translation projects. I ha
  
  
  ### Structure: 
+```
 ├─ NMT_xyz             
 │  ├─ checkpoints      
 │  │  ├─ decoder
@@ -24,7 +25,7 @@ This reporsiroty host my code base for Neural Machine Translation projects. I ha
 │  ├─ run.py            
 │  └─ utils.py          
 └─ readme.md            
-
+```
  
  # replace xyz with attention, transformer, seq2seq
 # stores encoder and decoder weights in .h5
