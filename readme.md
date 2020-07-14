@@ -28,4 +28,12 @@ This repository host my code base for Neural Machine Translation projects. I hav
 └─ readme.md            
 ```
  
-### How to run:
+### How to train/ test:
+
+To Train:
+  - Set MODE = 'Train' in ```run.py``` file
+  - run ```python run.py```
+  
+To TEST/ PREDICT:
+  - Set MODE = 'TEST' in ```run.py``` file
+  - run ```python run.py```
