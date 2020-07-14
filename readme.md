@@ -1,9 +1,9 @@
 # Neural Machine Translation using Tensorflow 2.0
 
 This repository host my code base for Neural Machine Translation projects. I have implemented 3 different types of models for machine translation:
- - MT using Seq2Seq model (No attention mechanism)
- - MT using Seq2Seq model with attention
- - MT using Transformer 
+ - [MT using Seq2Seq model]() (No attention mechanism)
+ - [MT using Seq2Seq model] (https://github.com/pradeepsinngh/Neural-Machine-Translation/tree/master/NMT_attention) with attention
+ - [MT using Transformer] (https://github.com/pradeepsinngh/Neural-Machine-Translation/tree/master/NMT_Transformer)
  
  
  ### Repository Structure: 
